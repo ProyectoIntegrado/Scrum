@@ -3,21 +3,22 @@
 #Usuario y contraseña correcto
 UserC="Ubuntu"
 PassC="12345"
+#Archivo en forma de variable y El texto en caso de que se introduzca la informacion correcta
+File="clave1.txt"
+Text="Bienvenido $User , en que podemos ayudarle?"
 
 #Aqui pide que se introduzca el usuario y contraseña
   echo "Introduce usuario"
-  read User
+  read -t 6 -p "se ha excedido el tiempo de comprobación; disculpe las molestias" User
   echo "Introduce contraseña"
-  read Pass
+  read -t 6 -p "se ha excedido el tiempo de comprobación; disculpe las molestias"Pass
 echo -n "Usuario: $User \n Contraseña: $Pass"
-
 #usuario y la contraseña sean incorrectas dira el mensaje
 if [ $User = $UserC ] | [ $Pass = $PassC ];
 	then 
 		echo -e "\nEl usuario y/o contraseña son correctos"
+		chmod 777 $File
+		echo -e $Text
 	else 
 		eche -e "\nEl usuario y/o contraseña son incorrectos"
 fi
-
-#Tiempo limite de 6 segundos para la introducción de los datos
-read -t 6 -p "se ha excedido el tiempo de comprobación; disculpe las molestias"
