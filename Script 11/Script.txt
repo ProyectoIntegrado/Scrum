@@ -10,8 +10,3 @@ PassC="12345"
   echo "Introduce contraseña"
   read Pass
 echo -n "Usuario: $User \n Contraseña: $Pass"
-#usuario y la contraseña sean incorrectas dira el mensaje
-then 
-	echo -e "\nEl usuario y/o contraseña son correctos"
-else 
-	eche -e "\nEl usuario y/o contraseña son incorrectos"
