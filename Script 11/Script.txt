@@ -10,6 +10,7 @@ PassC="12345"
   echo "Introduce contraseña"
   read Pass
 echo -n "Usuario: $User \n Contraseña: $Pass"
+
 #usuario y la contraseña sean incorrectas dira el mensaje
 if [ $User = $UserC ] | [ $Pass = $PassC ];
 	then 
@@ -17,3 +18,6 @@ if [ $User = $UserC ] | [ $Pass = $PassC ];
 	else 
 		eche -e "\nEl usuario y/o contraseña son incorrectos"
 fi
+
+#Tiempo limite de 6 segundos para la introducción de los datos
+read -t 6 -p "se ha excedido el tiempo de comprobación; disculpe las molestias"
