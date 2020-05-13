@@ -1,8 +1,12 @@
 #!/bin/bash
 
-echo "Introduce usuario"
-read User
-echo "Introduce contraseña"
-read Pass
+#Usuario y contraseña correcto
+UserC="Ubuntu"
+PassC="12345"
 
+#Aqui pide que se introduzca el usuario y contraseña
+  echo "Introduce usuario"
+  read User
+  echo "Introduce contraseña"
+  read Pass
 echo -n "Usuario: $User \n Contraseña: $Pass"
