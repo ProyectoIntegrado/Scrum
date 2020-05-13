@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Introduce usuario"
+read User
+echo "Introduce contraseña"
+read Pass
+
+echo -n "Usuario: $User \n Contraseña: $Pass"
